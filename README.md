@@ -1,6 +1,6 @@
 # react-demo
 
-A profile demo built with React + Flux.
+A profile demo built with React + Flux. [Do It Live!](https://ambitioninc.github.com/react-demo)
 
 ## Install
 
