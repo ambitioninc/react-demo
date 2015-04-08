@@ -1,6 +1,6 @@
 # react-demo
 
-This repo contains a profile demo built with React + Flux.
+A profile demo built with React + Flux.
 
 ## Install
 

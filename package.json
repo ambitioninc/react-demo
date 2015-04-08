@@ -2,7 +2,7 @@
   "name": "react-demo",
   "version": "0.0.1",
   "private": true,
-  "description": "A React demo.",
+  "description": "A profile demo built with React + Flux.",
   "main": "index.js",
   "scripts": {
     "browserify": "browserify src/app.js -o static/dwitter.js",
