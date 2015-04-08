@@ -1,0 +1,55 @@
+{
+  "name": "react-demo",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A React demo.",
+  "main": "index.js",
+  "scripts": {
+    "browserify": "browserify src/app.js -o static/dwitter.js",
+    "build": "npm run browserify && npm run uglify",
+    "lint": "eslint src",
+    "cover": "babel-node node_modules/.bin/babel-istanbul cover _mocha -- --require .mocha.js --recursive src",
+    "check_coverage": "babel-istanbul check-coverage .coverage/coverage.json",
+    "test": "npm run lint && npm run cover && npm run check_coverage",
+    "uglify": "uglifyjs static/dwitter.js -o static/dwitter.min.js"
+  },
+  "author": "Jeff McRiffey",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.0.9",
+    "babel-istanbul": "^0.1.0",
+    "babel-runtime": "^5.0.10",
+    "babelify": "^6.0.1",
+    "browserify": "^9.0.7",
+    "eslint": "^0.18.0",
+    "jsdom": "^3.1.2",
+    "mocha": "^2.2.1",
+    "sinon": "^1.14.1",
+    "uglify-js": "^2.4.19"
+  },
+  "dependencies": {
+    "moment": "^2.10.0",
+    "react": "^0.13.1",
+    "reflux": "^0.2.7"
+  },
+  "browserify": {
+    "require": [
+      "moment",
+      "react",
+      "reflux"
+    ],
+    "noparse": [
+      "moment",
+      "react",
+      "reflux"
+    ],
+    "transform": [
+      [
+        "babelify",
+        {
+          "optional": "runtime"
+        }
+      ]
+    ]
+  }
+}

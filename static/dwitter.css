@@ -1,0 +1,425 @@
+body, html {
+    background: #f5f8fa;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    min-width: 1080px;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-wrapper {
+    width: 100%;
+}
+
+.profile-nav {
+    background: url('images/dwitter.png') no-repeat 50% 50%;
+    background-size: 24px 24px;
+    border-bottom: 1px solid #ededed;
+    box-sizing: border-box;
+    height: 46px;
+    line-height: 40px;
+    padding: 0 40px;
+}
+
+.profile-nav a {
+    color: #787878;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.profile-nav a:hover {
+    color: #159999;
+
+}
+
+.profile-menu {
+    float: right;
+    position: relative;
+}
+
+.profile-menu .profile-menu-list {
+    background: #ffffff;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 12px;
+    left: -100px;
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    position: absolute;
+    top: 48px;
+    width: 160px;
+}
+
+.profile-menu .profile-menu-list li {
+    cursor: pointer;
+}
+
+.profile-menu .profile-menu-list li:hover {
+    background: #159999;
+}
+
+.profile-menu .profile-menu-list li:hover a {
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+
+.profile-menu .profile-menu-list li:hover a:hover {
+    color: #ffffff;
+}
+
+.profile-menu .profile-image {
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 20px;
+    height: 32px;
+    vertical-align: middle;
+    width: 32px;
+}
+
+.profile-nav-left {
+    float: left;
+}
+
+.profile-nav-right {
+    float: right;
+}
+
+.profile-search {
+    float: left;
+    position: relative;
+}
+
+.profile-search input {
+    background: #f8f8f8;
+    border: 1px solid #ededed;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    padding: 5px 25px 6px 15px;
+    transition: background 0.2s ease-in-out;
+    width: 220px;
+}
+
+.profile-search input:focus {
+    background: #ffffff;
+}
+
+.profile-search-results {
+    background: #ffffff;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    left: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    position: absolute;
+    top: 48px;
+    width: 300px;
+}
+
+.profile-search-results li {
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+}
+
+.profile-search-results li:hover {
+    background: #159999;
+}
+
+.profile-search-results li:hover a {
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+
+.profile-search-results li:hover a:hover {
+    color: #ffffff;
+}
+
+.profile-dweet-button-wrapper {
+    float: right;
+    position: relative;
+}
+
+.profile-dweet-button {
+    background: #33adad;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    height: 32px;
+    width: 92px;
+    transition: all 0.2s ease-in-out;
+}
+
+.profile-dweet-button:hover {
+    background: #159999;
+}
+
+.profile-dweet-button:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.profile-dweet-button:disabled:hover {
+    background: #33adad;
+}
+
+.profile-mask {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.profile-dweet-dialog {
+    background: #ffffff;
+    border-radius: 4px;
+    margin: 60px auto 0 auto;
+    height: 220px;
+    width: 600px;
+}
+
+.profile-dweet-dialog .dweet-header {
+    color: #999999;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+}
+
+.profile-dweet-dialog .dweet-close {
+    cursor: pointer;
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    position: absolute;
+    right: 4px;
+    text-align: center;
+    top: 4px;
+    width: 16px;
+}
+
+.profile-dweet-dialog .dweet-body {
+    background: #e5f5f5;
+    border-radius: 0 0 4px 4px;
+    border-top: 1px solid #bfe5e5;
+    box-sizing: border-box;
+    height: 180px;
+    padding: 14px;
+}
+
+.profile-dweet-dialog .dweet-body textarea {
+    border: 1px solid #bfe5e5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 100px;
+    resize: none;
+    outline: none;
+    padding: 8px;
+    width: 100%;
+}
+
+.profile-dweet-dialog .dweet-body .dweet-chars-left {
+    color: #999999;
+    float: right;
+    margin: -4px 10px 0 0;
+}
+
+.profile-dweet-dialog .dweet-body .profile-dweet-button {
+    float: right;
+}
+
+.profile-header-image {
+    background-color: #33adad;
+    background-size: cover;
+    height: 320px;
+}
+
+.profile-header-bottom {
+    background: #ffffff;
+    border-bottom: 1px solid #ededed;
+    color: #999999;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.profile-user {
+    box-sizing: border-box;
+    float: left;
+    font-size: 14px;
+    padding: 0 40px 0 40px;
+    width: 400px;
+}
+
+.profile-user .user-image {
+    border: 4px solid #ffffff;
+    border-radius: 8px;
+    height: 200px;
+    margin-top: -180px;
+    width: 200px;
+}
+
+.profile-user .user-name {
+    font-size: 24px;
+}
+
+.profile-user .user-username {
+    color: #999999;
+}
+
+.profile-user a {
+    color: #159999;
+    text-decoration: none;
+}
+
+.profile-user .user-about {
+    margin: 8px 0;
+}
+
+.profile-user .user-location {
+    margin-left: 6px;
+}
+
+.profile-user .user-website {
+    margin-left: 6px;
+}
+
+.profile-user .user-joined {
+    margin-left: 6px;
+}
+
+.profile-dweet-list {
+    background: #ffffff;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    float: left;
+    list-style: none;
+    margin: 10px 0 10px 0;
+    padding: 0;
+    width: 640px;
+}
+
+.profile-dweet-list li {
+    border-bottom: 1px solid #ededed;
+    height: 70px;
+    padding: 10px 20px;
+}
+
+.profile-dweet-list .dweet-username {
+    color: #999999;
+    font-size: 12px;
+    margin-left: 6px;
+}
+
+.profile-dweet-list .dweet-photo {
+    border-radius: 4px;
+    height: 24px;
+    margin-right: 6px;
+    width: 24px;
+    vertical-align: middle;
+}
+
+.profile-dweet-list .dweet-text {
+    margin: 12px 0 0 30px;
+}
+
+.profile-edit-dialog {
+    background: #ffffff;
+    border-radius: 4px;
+    margin: 60px auto 0 auto;
+    height: 220px;
+    width: 600px;
+}
+
+.profile-dweet-dialog .dweet-header {
+    color: #999999;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+}
+
+.profile-edit-button-wrapper {
+    float: right;
+    position: relative;
+}
+
+.profile-edit-button {
+    background: #dddddd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    height: 32px;
+    margin-right: 40px;
+    width: 92px;
+    transition: all 0.2s ease-in-out;
+}
+
+.profile-edit-button:hover {
+    background: #bbbbbb;
+}
+
+.profile-edit-dialog .edit-header {
+    color: #999999;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+}
+
+.profile-edit-dialog .edit-close {
+    cursor: pointer;
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    position: absolute;
+    right: 4px;
+    text-align: center;
+    top: 4px;
+    width: 16px;
+}
+
+.profile-edit-dialog .edit-body {
+    background: #ffffff;
+    border-radius: 0 0 4px 4px;
+    border-top: 1px solid #ededed;
+    box-sizing: border-box;
+    padding: 14px;
+}
+
+.profile-edit-dialog .edit-body input[type="text"] {
+    display: block;
+    border: 1px solid #ededed;
+    border-bottom-width: 2px;
+    border-radius: 4px;
+    height: 32px;
+    margin: 4px auto;
+    padding: 5px 25px 6px 15px;
+    width: 300px;
+}
+
+.profile-edit-dialog .edit-body button {
+    background: #ffffff;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    color: #999999;
+    cursor: pointer;
+    margin: 10px;
+    height: 32px;
+    width: 92px;
+}
