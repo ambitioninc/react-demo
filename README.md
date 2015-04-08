@@ -13,6 +13,7 @@ npm install ambitioninc/react-demo
 
 To rebuild the static files:
 ```shell
+npm install
 npm run build
 ```
 
