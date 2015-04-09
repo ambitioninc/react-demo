@@ -17,6 +17,13 @@ npm install
 npm run build
 ```
 
+## Links
+
+[React Documentation](http://facebook.github.io/react/docs/getting-started.html)
+[Reflux](https://github.com/spoike/refluxjs)
+[Babel](https://babeljs.io/)
+
+
 ## License
 
 MIT License
